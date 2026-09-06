@@ -1,14 +1,10 @@
-// Week 8 - Express.js Routing
-// Week 10 - REST API Development
+
 
 const express = require('express');
 const router = express.Router();
 const Task = require('../models/Task');
 
-// ============================================
-// GET /api/tasks - Get all tasks
-// Week 10 - REST API
-// ============================================
+
 router.get('/', async (req, res) => {
   try {
     const tasks = await Task.find().sort({ createdAt: -1 });
